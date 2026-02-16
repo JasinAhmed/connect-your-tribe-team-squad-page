@@ -1,0 +1,567 @@
+/* Custom font */
+@font-face {
+    font-family: 'au bord de la seine';
+    src: url('/fonts/Au Bord de la Seine.ttf') format('truetype');
+}
+
+/* Algemeen */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Scrollen in html element-gaat smooth */
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+
+    color: var(--dark-text-color);
+}
+
+/* Custom properties */
+:root {
+    /* Custom colors */
+    --text-color: rgb(20, 0, 172);
+    --dark-text-color: rgb(23, 23, 23);
+    --dark-color-hover: rgb(75, 75, 75);
+    --light-color: rgb(255, 255, 255);
+    --second-light-color: rgb(241, 241, 241);
+    --warm-light-color: rgb(251, 233, 216);
+    --dark-border-color: rgb(0, 0, 0);
+    --max-width-notebook: 25em;
+
+    --font-size-l: 1.6rem;
+    --font-size-m: 1.4rem;
+    --font-size-s: 1.2rem;
+    --font-size-xs: 1rem;
+}
+
+body {
+    padding: 0.5em;
+    display: grid;
+    justify-content: center;
+}
+
+
+
+/* Filter en sorteren/ header */
+Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    background: var(--second-light-color);
+    box-shadow: 2px -1px 6px 0px rgba(0,0,0,0.24);
+
+    padding: 0.5em;
+    margin: 0 1em;
+
+    /* Sorteer alfabetische volgorde op index.liquid */
+    .sort-name-order-link {
+        display: flex;
+        gap: 0.2em;
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5em;
+        font-weight: 600;
+
+        &:hover {
+            svg {
+                animation-name: --rotate;
+                animation-duration: 1.5s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &:active {
+            color: black;
+
+            svg {
+                fill: black;
+            }
+        } 
+    }
+
+    /* Filter op seizoenen op index.liquid en season.liquid*/
+    details {
+        position: relative;
+        z-index: 1;
+        padding: 0.5em;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &[open]::details-content {
+            display: grid;
+            position: absolute;
+            top: 2em;
+            background: var(--second-light-color);
+            border-radius: 0 0 5px 5px;
+            padding: 0.5em 1em;
+            text-underline-offset: 0.1em;
+            line-height: 1.8;
+            box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.228);
+        }
+
+        /* Links naar fav. seizoenen */
+        a {
+            text-underline-offset: 0.3em;
+            color: inherit;
+
+            &:active {
+                color: var(--text-color);
+            }
+
+            /* Lente filter */
+            &:nth-of-type(1){
+                &:hover {
+                    color: rgb(0, 124, 0);
+                }
+                &::after {
+                    content:'🌱';
+                } 
+            }
+
+            /* Zomer filter */
+            &:nth-of-type(2){
+                &:hover {
+                    color: rgb(220, 69, 149);
+                }
+                &::after {
+                    content:'🌞';
+                } 
+            }
+
+            /* Herfst filter */
+            &:nth-of-type(3){
+                &:hover {
+                    color: rgb(255, 90, 1);
+                }
+                &::after {
+                    content:'🍁';
+                } 
+            }
+
+            /* Winter filter */
+            &:nth-of-type(4){
+                &:hover {
+                    color: rgb(19, 146, 250);
+                }
+                &::after {
+                    content:'❄️';
+                } 
+            }
+        }
+    }
+
+    /* 'Terug naar index/ homepagina' en 'ga naar stickers' op student.liquid */
+    .back-to-homepage,
+    .go-to-stickers  {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2em;
+        color: inherit;
+        font-weight: 700;
+        transition: 0.2s;
+        padding: 0.5em 0em;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--dark-color-hover);
+            
+
+            svg {
+                fill: var(--dark-color-hover);
+            }
+        }
+    }
+
+    .back-to-homepage:hover svg {
+        transform: translateX(-0.3em);
+    }
+
+    .go-to-stickers:hover svg {
+        transform: translateY(0.3em);
+    }
+
+    /* Op student.liquid pagina */
+    h2 {
+        font-size: var(--font-size-s);
+        margin: 0;
+    }
+}
+
+/* Animatie voor sorteer knop */
+@keyframes --rotate {
+    50% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+
+/* filter en sorteer studenten lijst op index.liquid en season.liquid*/
+.student-list {
+    position: relative;
+    background: var(--warm-light-color);
+    border: 10px solid var(--dark-border-color);
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px rgb(81, 81, 81);
+    padding: 1em 2em;
+    margin: 0;
+    width: clamp(15.2em, 65dvw, var(--max-width-notebook));
+
+    /* Before's en after's zijn de buitenste ringen links van de notebook */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background: rgb(128, 128, 128);
+        border: 10px solid var(--dark-border-color);
+        border-radius: 50px;
+        height: 0.5em;
+        width:1.8em;
+        left: -1.5em;
+    }
+
+    &::before {
+        top: 3em;
+    }
+
+    &::after {
+        bottom: 3em;
+    }
+
+    h2 {
+        margin: 0;
+        padding-bottom: 0.5em;
+    }
+
+    ul {
+        padding: 1em 1.5em 2em 1.5em;
+        margin: 0;
+        background:var(--light-color);
+        line-height: 1.6;
+
+        list-style: circle;
+
+        li {
+            border-bottom: 1px solid black;
+            transition: 0.6s;
+        }
+
+        a {
+            color: var(--text-color);
+            font-weight: 600;
+            text-decoration: none;
+            
+
+            svg {
+                fill: var(--text-color);
+            }
+
+            &:hover {
+                color: var(--dark-text-color);
+
+                svg {
+                    fill: var(--dark-text-color);
+                    transform: translateX(0.5em);
+                }
+            }
+
+            &:active {
+                color: rgb(96, 76, 250);
+
+                svg {
+                    fill: rgb(96, 76, 250);
+                }
+            }
+        }
+    }
+}
+
+
+/* Styling voor student.liquid */
+/* Achtergrond notebook */
+.student-page {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: var(--warm-light-color);
+    border: 10px solid var(--dark-border-color);
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px rgb(81, 81, 81);
+    padding: 1.5em 1em 1em 2em;
+    position: relative;
+
+    width: clamp(16.4em, 65dvw, var(--max-width-notebook));
+
+
+    /* Before's en after's zijn de buitenste ringen links van de notebook */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background: grey;
+        border: 10px solid black;
+        border-radius: 50px;
+        height: 0.5em;
+        width:1.8em;
+        left: -1.5em;
+    }
+
+    &::before {
+        top: 3em;
+    }
+
+    &::after {
+        bottom: 3em;
+    }
+}
+
+/* Profielfoto */
+.profile-picture {
+    margin-bottom: 0.5em;
+    aspect-ratio: 1;
+    max-width: 10em;
+    object-fit: cover;
+    object-position: 40%;
+    border: 5px solid var(--light-color);
+}
+
+/* Persoons gegevens tabel */
+table {
+    text-align: left;
+    border-collapse: collapse; 
+    
+    tr {
+        border-bottom: 1px solid rgb(125, 125, 125);
+        td {
+            color: var(--text-color);
+            font-family: 'au bord de la seine', cursive;
+            font-weight: 700;
+            font-size: var(--font-size-s);
+            letter-spacing: 1px;
+            padding-left: 0.5em;
+            
+            
+        }
+    }
+
+    h2 {
+        font-size: var(--font-size-s); 
+        margin: 0;
+        font-weight: 700;
+    }
+}
+
+.bio {
+    margin-top: 2em;
+    text-align: center;
+    background-image: url(../assets/background-blob.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 1em 2em 2em;
+    
+
+    p:nth-of-type(1) {
+        font-weight: 700;
+    }
+
+    p:nth-of-type(2) {
+        max-width: 20em;
+    }
+}
+
+/* Wrapper met social media links */
+.social-media-links {
+    list-style: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+    gap: 1em;
+    padding: 0.5em;
+
+    @media (min-width: 800px) {
+      padding-top: 0;
+    }
+
+    a {
+      display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        text-decoration: 1px solid underline;
+        font-weight: 600;
+        transition: 0.1s;
+
+        svg {
+          width: 2em;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+    } 
+
+}
+
+
+
+/* Styling van stickers */
+.stickers {
+    display: flex;
+    justify-content: center;
+    margin-block: 1em;
+    padding-block: 1em;
+
+    label {
+        padding: 0 0.5em;
+        position: relative;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+
+            img {
+                scale: 1.1;
+            }
+        }
+
+        input {
+            position: absolute;
+            inset: 0;
+            appearance: none;
+
+            /* Actieve emoji */
+            &:checked {
+                padding-bottom: 1em;
+                border-bottom: 2px solid var(--dark-text-color);
+            }
+        }
+
+    }
+    
+}
+
+/* Algemene styling als er op een emoji is geklikt */
+.stickers label:has(:checked) {
+    &:hover {
+        img {
+            scale: 1;
+        }      
+    }
+    img {
+        animation-duration: 0.8s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+/* Hartjes emoji als aangeklikt */
+.stickers label:nth-of-type(1):has(:checked) img{
+    animation-name: --hearts-emoji;
+}
+
+@keyframes --hearts-emoji {
+    50% {
+        transform: translate(13em, -11.5em) rotate(30deg) scale(1.8);
+    }
+    80% {
+        transform: translate(13em, -12.5em) rotate(30deg) scale(2);
+    }
+    100% {
+        transform: translate(13em, -11.5em) rotate(30deg) scale(1.8);
+    }
+}
+
+/* Kots emoji als aangeklikt*/
+.stickers label:nth-of-type(2):has(:checked) img{
+    animation-name: --nauseated-emoji;
+}
+
+@keyframes --nauseated-emoji {
+    50% {
+        transform: translate(9em, -11.5em) rotate(30deg) scale(1.8);
+    }
+    80% {
+        transform: translate(9em, -12.5em) rotate(30deg) scale(2);
+
+    }
+    100% {
+        transform: translate(9em, -11.5em) rotate(30deg) scale(1.8);
+    }
+}
+
+/* Feest emoji als aangeklikt*/
+.stickers label:nth-of-type(3):has(:checked) img{
+    animation-name: --party-emoji;
+}
+
+@keyframes --party-emoji {
+    50% {
+        transform: translate(4.5em, -11.5em) rotate(30deg) scale(1.8);
+    }
+    80% {
+        transform: translate(4.5em, -12.5em) rotate(30deg) scale(2);
+    }
+    100% {
+        transform: translate(4.5em, -11.5em) rotate(30deg) scale(1.8);
+    }
+}
+
+/* Cool emoji als aangeklikt*/
+.stickers label:nth-of-type(4):has(:checked) img{
+    animation-name: --cool-emoji;
+}
+
+@keyframes --cool-emoji {
+    50% {
+        transform: translate(0, -11.5em) rotate(30deg) scale(1.8);
+    }
+    80% {
+        transform: translate(0, -12.5em) rotate(30deg) scale(2);
+    }
+    100% {
+        transform: translate(0, -11.5em) rotate(30deg) scale(1.8);
+    }
+}
+
+
+
+/* Styling voor footer */
+/* Back to top knop */
+.back-to-top {
+    display: inline-flex;
+    gap: 0.1em;
+    justify-self: end;
+    position: sticky;
+    bottom: 1em;
+    padding: 0.5em;
+    color: inherit;
+    text-decoration: none;
+    background: var(--light-color);
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 5px;
+    font-weight: 600;
+    width: fit-content;
+    transition: 0.4s;
+
+    &:hover {
+
+        svg {
+            transform: translateY(-0.3em);
+        }
+    }
+}
+
