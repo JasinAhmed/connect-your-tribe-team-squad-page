@@ -100,32 +100,56 @@
             </a>
           </li>
         </ul>
-
         
     </section>
 
-    {% comment %} Stickervel {% endcomment %}
-    <form class="stickers" id="stickers">
-        <fieldset>
-            <legend>Stickervel</legend>
-            <label>
-                <input type="radio" name="emoji">
-                <img src="/assets/smiling_face_with_3_hearts.png" alt="Smiling face with 3 hearts emoji" width="50">
-            </label>
-            <label>
-                <input type="radio" name="emoji">
-                <img src="/assets/nauseated_face.png" alt="Nauseated emoji" width="50">
-            </label>
-            <label>
-                <input type="radio" name="emoji">
-                <img src="/assets/partying_face.png" alt="Partying face emoji" width="50">
-            </label>
-            <label>
-                <input type="radio" name="emoji">
-                <img src="/assets/sunglasses.png" alt="Sunglasses face emoji" width="50">
-            </label>
-        </fieldset>
-    </form>
+    {% comment %} User generated content {% endcomment %}
+    <section>
+        {% comment %} Stickervel {% endcomment %}
+        <form class="stickers" id="stickers">
+            <fieldset>
+                <legend>Stickervel</legend>
+                <label>
+                    <input type="radio" name="emoji">
+                    <img src="/assets/smiling_face_with_3_hearts.png" alt="Smiling face with 3 hearts emoji" width="50">
+                </label>
+                <label>
+                    <input type="radio" name="emoji">
+                    <img src="/assets/nauseated_face.png" alt="Nauseated emoji" width="50">
+                </label>
+                <label>
+                    <input type="radio" name="emoji">
+                    <img src="/assets/partying_face.png" alt="Partying face emoji" width="50">
+                </label>
+                <label>
+                    <input type="radio" name="emoji">
+                    <img src="/assets/sunglasses.png" alt="Sunglasses face emoji" width="50">
+                </label>
+            </fieldset>
+        </form>
+
+        <h2>Voeg een bericht toe</h2>
+        
+        <form method="post" action="/student/{{ personDetail.id }}">
+          <label>
+            Naam:
+            <input type="text" name="from" required>
+          </label>
+          <label>
+            Bericht:
+            <textarea name="text" required></textarea>
+          </label>
+          <button type="submit">Verstuur</button>
+        </form>
+
+        <h2>Huidige berichten</h2>
+
+        {% for message in messages %}
+          <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+        {% else %}
+          <p>Er zijn nog geen berichten voor dit team.</p>
+        {% endfor %}
+    </section>
 
 </main>
 
