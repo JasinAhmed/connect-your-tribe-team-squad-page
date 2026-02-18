@@ -568,28 +568,36 @@ table {
 /* Zoekbalk in student-list */
 /* Container met icoon + input */
 .student-list .zoek-wrapper {
-    display: flex;                /* zet icoon en input naast elkaar */
-    align-items: center;          /* verticaal netjes uitlijnen */
-    gap: 0.6em;                   /* ruimte tussen icoon en input */
-
-    margin: 1em 1.5em 0.8em 1.5em; /* zelfde links/rechts als de ul */
-    padding: 0.6em 0.9em;         /* ruimte binnen de witte balk */
-
+    position: relative;            /* nodig voor absolute icoon */
+    margin: 1em 1.5em 0.8em 1.5em;  /* zelfde links/rechts als de ul */
     background: var(--light-color); /* zelfde wit als de lijst */
-    border-radius: 999px;         /* afgeronde hoeken */
+    border-radius: 999px;          /* afgeronde hoeken */
 }
 
 /* Zoek icoon */
 .student-list .zoek-icon {
-    width: 1.1em;                 /* icoon kleiner maken */
-    height: 1.1em;
+    position: absolute;            /* icoon vast in de balk */
+    left: 1em;                     /* afstand van links */
+    top: 50%;                      /* midden van de balk */
+    transform: translateY(-50%);   /* exact centreren */
+
+    width: 1.8em;                  /* duidelijker icoon */
+    height: 1.8em;
+    display: block;                /* voorkomt baseline problemen */
 }
 
 /* Input veld */
 .student-list .zoekbalk {
-    flex: 1;                      /* input vult resterende ruimte */
-    border: none;                 /* standaard rand verwijderen */
-    outline: none;                /* blauwe focus rand verwijderen */
-    background: transparent;      /* gebruikt achtergrond van wrapper */
+    width: 100%;                   /* input vult hele wrapper */
+    border: none;                  /* standaard rand verwijderen */
+    outline: none;                 /* blauwe focus rand verwijderen */
+    background: transparent;       /* gebruikt achtergrond van wrapper */
+
     font-size: var(--font-size-xs);
+    line-height: 1;                /* tekst niet laten zakken */
+    box-sizing: border-box;        /* padding telt mee */
+
+    padding: 0.8em 1em;            /* hoogte van de balk */
+    padding-left: 2.8em;           /* ruimte voor het icoon */
+    border-radius: 999px;          /* klikgebied ook rond */
 }
