@@ -63,10 +63,25 @@ Feedforward filter items:
 
 Feedback filter items:
 - Na het klikken op een filter item veranderd de lijst met namen
-  
-https://github.com/user-attachments/assets/fa1a5d5f-836f-4326-9ea3-7c09a684ce55
 
 ### Zoekbalk
+De zoekbalk is door mij ontwikkeld met JavaScript in een apart `script.js` bestand.
+
+Met behulp van een `input` event listener wordt de ingevoerde waarde realtime vergeleken met de namen van de studenten in de lijst. De vergelijking is case-insensitive door zowel de zoekterm als de studentnaam om te zetten naar lowercase.
+
+Wanneer een student niet overeenkomt met de zoekterm, wordt het bijbehorende `<li>` element verborgen met het `hidden` attribuut. Als er geen matches gevonden worden, wordt de melding **"Geen persoon gevonden."** zichtbaar gemaakt.
+
+De filtering gebeurt volledig client-side, waardoor de interactie direct en zonder page reload plaatsvindt.
+
+#### Video demonstratie
+De werking van de zoekbalk wordt toegelicht in een korte video. In deze video is te zien hoe:
+
+- De lijst realtime filtert tijdens het typen  
+- De melding **"Geen persoon gevonden."** verschijnt wanneer er geen match is  
+- De focus-state zichtbaar wordt bij interactie  
+
+🔗 Link naar video: https://github.com/user-attachments/assets/9e5db281-b1e8-45f6-b332-0fb662cbe93d
+
 
 ### Comments sectie
 
