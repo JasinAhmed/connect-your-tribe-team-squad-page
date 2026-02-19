@@ -32,7 +32,7 @@ html {
     --warm-light-color: rgb(251, 233, 216);
     --dark-border-color: rgb(0, 0, 0);
     --messages-background-color: rgb(200, 200, 200);
-    --warning-color: #ff0000;
+    --warning-color: rgb(255, 0, 0);
     --max-width-notebook: 25em;
 
     /* Custom font sizes */
@@ -195,7 +195,19 @@ Header {
     }
 }
 
+/* Styling voor de 'Ga naar inhoud' knop */
+.skip-link {
+    position: absolute;
+    left: -9999px;
 
+    &:focus {
+        left: 10px;
+        top: 10px;
+        background: white;
+        padding: 8px;
+        z-index: 1000;
+    }
+}
 
 /* filter en sorteer studenten lijst op index.liquid en season.liquid*/
 .student-list {
@@ -227,6 +239,49 @@ Header {
 
     &::after {
         bottom: 3em;
+    }
+
+    /* Zoekbalk in student-list */
+    /* Container met icoon + input */
+    .zoek-wrapper {
+        position: relative;            /* nodig voor absolute icoon */
+        margin: 1em 1.5em 0.8em 1.5em;  /* zelfde links/rechts als de ul */
+        background: var(--light-color); /* zelfde wit als de lijst */
+        border-radius: 999px;          /* afgeronde hoeken */
+        border: 2px solid transparent; /* vaste border zodat niets verschuift */
+
+        /* Focus state */
+        &:focus-within {
+            box-shadow: 0 0 0 3px black;   /* outline zonder layout shift */
+        }
+
+        /* Zoek icoon */
+        .zoek-icon {
+            position: absolute;            /* icoon vast in de balk */
+            left: 1em;                     /* afstand van links */
+            top: 50%;                      /* midden van de balk */
+            transform: translateY(-50%);   /* exact centreren */
+        
+            width: 1.8em;                  /* duidelijker icoon */
+            height: 1.8em;
+            display: block;                /* voorkomt baseline problemen */
+        }
+
+        /* Input veld */
+        .zoekbalk {
+            width: 100%;                   /* input vult hele wrapper */
+            border: none;                  /* standaard rand verwijderen */
+            outline: none;                 /* blauwe focus rand verwijderen */
+            background: transparent;       /* gebruikt achtergrond van wrapper */
+
+            font-size: var(--font-size-xs);
+            line-height: 1;                /* tekst niet laten zakken */
+            box-sizing: border-box;        /* padding telt mee */
+
+            padding: 0.8em 1em;            /* hoogte van de balk */
+            padding-left: 2.8em;           /* ruimte voor het icoon */
+            border-radius: 999px;          /* klikgebied ook rond */
+        }   
     }
 
     h2 {
@@ -315,97 +370,98 @@ Header {
     &::after {
         bottom: 3em;
     }
-}
 
-/* Profielfoto */
-.profile-picture {
-    margin-bottom: 0.5em;
-    aspect-ratio: 1;
-    max-width: 10em;
-    object-fit: cover;
-    object-position: 40%;
-    border: 5px solid var(--light-color);
-}
+    /* Profielfoto */
+    .profile-picture {
+        margin-bottom: 0.5em;
+        aspect-ratio: 1;
+        max-width: 10em;
+        object-fit: cover;
+        object-position: 40%;
+        border: 5px solid var(--light-color);
+    }
 
-/* Persoons gegevens tabel */
-table {
-    text-align: left;
-    border-collapse: collapse; 
-    
-    tr {
-        border-bottom: 1px solid rgb(125, 125, 125);
-        td {
-            color: var(--text-color);
-            font-family: 'au bord de la seine', cursive;
+    /* Persoons gegevens tabel */
+    table {
+        text-align: left;
+        border-collapse: collapse; 
+
+        tr {
+            border-bottom: 1px solid rgb(125, 125, 125);
+            td {
+                color: var(--text-color);
+                font-family: 'au bord de la seine', cursive;
+                font-weight: 700;
+                font-size: var(--font-size-s);
+                letter-spacing: 1px;
+                padding-left: 0.5em;
+
+
+            }
+        }
+
+        h2 {
+            font-size: var(--font-size-s); 
+            margin: 0;
+            font-weight: 700;
+        }
+    }
+
+    .bio {
+        margin-top: 2em;
+        text-align: center;
+        background-image: url(../assets/background-blob.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding: 1em 2em 2em;
+        
+
+        h2 {
             font-weight: 700;
             font-size: var(--font-size-s);
-            letter-spacing: 1px;
-            padding-left: 0.5em;
-            
-            
+        }
+
+        p {
+            max-width: 20em;
         }
     }
 
-    h2 {
-        font-size: var(--font-size-s); 
-        margin: 0;
-        font-weight: 700;
-    }
-}
-
-.bio {
-    margin-top: 2em;
-    text-align: center;
-    background-image: url(../assets/background-blob.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    padding: 1em 2em 2em;
-    
-
-    p:nth-of-type(1) {
-        font-weight: 700;
-    }
-
-    p:nth-of-type(2) {
-        max-width: 20em;
-    }
-}
-
-/* Wrapper met social media links */
-.social-media-links {
-    list-style: '';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-    margin: 0;
-    gap: 1em;
-    padding: 0.5em;
-
-    @media (min-width: 800px) {
-      padding-top: 0;
-    }
-
-    a {
-      display: inline-flex;
-        flex-direction: column;
+    /* Wrapper met social media links */
+    .social-media-links {
+        list-style: '';
+        display: flex;
         justify-content: center;
         align-items: center;
-        color: black;
-        text-decoration: 1px solid underline;
-        font-weight: 600;
-        transition: 0.1s;
+        padding-left: 0;
+        margin: 0;
+        gap: 1em;
+        padding: 0.5em;
 
-        svg {
-          width: 2em;
+        @media (min-width: 800px) {
+          padding-top: 0;
         }
 
-        &:hover {
-          transform: scale(1.1);
-        }
-    } 
+        a {
+          display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-decoration: 1px solid underline;
+            font-weight: 600;
+            transition: 0.1s;
 
+            svg {
+              width: 2em;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+            }
+        } 
+
+    }
 }
 
 
@@ -529,47 +585,53 @@ table {
     }
 }
 
-/* Styling voor het formulier */
 
+
+
+/* Styling voor het formulier */
 /* Styling wrapper berichtenrubriek */
 .message-wrapper {
     background-color: var(--messages-background-color);
     font-family: 'Inria Serif';
     padding: 20px;
+
+    /* Waarschuwing formulier */
+    .form-warning {
+        color: var(--warning-color);
+        display: none;
+    }
+
+    /* Styling velden formulier */
+    .field {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .submit-message {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        
+        border: solid 2px var(--dark-border-color);
+        border-radius: 5px;
+        
+        font-family: 'Inria Serif';
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    /* Styling voor berichten */
+    .message {
+        background-color: blanchedalmond;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 }
 
-/* Waarschuwing formulier */
-.form-warning {
-    color: var(--warning-color);
-    display: none;
-}
-
-/* Styling velden formulier */
-.field {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.submit-message {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-
-    border: solid 2px var(--dark-border-color);
-    border-radius: 5px;
-
-    font-family: 'Inria Serif';
-    text-decoration: none;
-}
-
-/* Styling voor berichten */
-
-.message {
-    background-color: blanchedalmond;
-    padding: 15px;
-    margin-bottom: 15px;
-}
 
 
 /* Styling voor footer */
@@ -598,58 +660,4 @@ table {
     }
 }
 
-/* Zoekbalk in student-list */
-/* Container met icoon + input */
-.student-list .zoek-wrapper {
-    position: relative;            /* nodig voor absolute icoon */
-    margin: 1em 1.5em 0.8em 1.5em;  /* zelfde links/rechts als de ul */
-    background: var(--light-color); /* zelfde wit als de lijst */
-    border-radius: 999px;          /* afgeronde hoeken */
-    border: 2px solid transparent; /* vaste border zodat niets verschuift */
-}
 
-/* Focus state */
-.student-list .zoek-wrapper:focus-within {
-    box-shadow: 0 0 0 3px black;   /* outline zonder layout shift */
-}
-
-/* Zoek icoon */
-.student-list .zoek-icon {
-    position: absolute;            /* icoon vast in de balk */
-    left: 1em;                     /* afstand van links */
-    top: 50%;                      /* midden van de balk */
-    transform: translateY(-50%);   /* exact centreren */
-
-    width: 1.8em;                  /* duidelijker icoon */
-    height: 1.8em;
-    display: block;                /* voorkomt baseline problemen */
-}
-
-/* Input veld */
-.student-list .zoekbalk {
-    width: 100%;                   /* input vult hele wrapper */
-    border: none;                  /* standaard rand verwijderen */
-    outline: none;                 /* blauwe focus rand verwijderen */
-    background: transparent;       /* gebruikt achtergrond van wrapper */
-
-    font-size: var(--font-size-xs);
-    line-height: 1;                /* tekst niet laten zakken */
-    box-sizing: border-box;        /* padding telt mee */
-
-    padding: 0.8em 1em;            /* hoogte van de balk */
-    padding-left: 2.8em;           /* ruimte voor het icoon */
-    border-radius: 999px;          /* klikgebied ook rond */
-}
-
-.skip-link {
-  position: absolute;
-  left: -9999px;
-}
-
-.skip-link:focus {
-  left: 10px;
-  top: 10px;
-  background: white;
-  padding: 8px;
-  z-index: 1000;
-}

@@ -2,7 +2,6 @@
 
 <a href="#main" class="skip-link">Ga naar inhoud</a>
 
-
 {% comment %} Filter en sorteren {% endcomment %}
 <header>
   <a href="/" class="back-to-homepage">
@@ -31,16 +30,16 @@
   <h2>
     Favoriete seizoen:
     {% if spring %}
-    Lente🌱
+      Lente🌱
     {% elsif summer %}
-    Zomer🌞
+      Zomer🌞
     {% elsif autumn %}
-    Herfst🍁
+      Herfst🍁
     {% elsif winter %}
-    Winter❄️
+      Winter❄️
     {% endif %}
   </h2>
-  
+
   <ul>
     {% for person in persons %}
       <li>
@@ -50,10 +49,9 @@
             <path d="M9.30176 1.42822L10.3857 0.344238C10.8447 -0.114746 11.5869 -0.114746 12.041 0.344238L21.5332 9.83154C21.9922 10.2905 21.9922 11.0327 21.5332 11.4868L12.041 20.979C11.582 21.438 10.8398 21.438 10.3857 20.979L9.30176 19.895C8.83789 19.4312 8.84766 18.6743 9.32129 18.2202L15.2051 12.6147H1.17188C0.522461 12.6147 0 12.0923 0 11.4429V9.88037C0 9.23096 0.522461 8.7085 1.17188 8.7085H15.2051L9.32129 3.10303C8.84277 2.64893 8.83301 1.89209 9.30176 1.42822Z" fill=""/>
           </svg>
         </a>
-    </li>
+      </li>
     {% endfor %}
   </ul>
 </section>
-
 
 {% render 'partials/foot.liquid', squads: squads %}
