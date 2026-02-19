@@ -35,7 +35,7 @@ Responsive
 De website is responsive en is Mobile first ontworpen en gemaakt. We hebben gebruik gemaakt van `media queries` om de website op verschillende apparaten responsive te maken.
 
 #### Toegankelijk
-Voor de toegankelijkheid hebben we een [WCAG Audit]() en [Color Contrast Tests]() uitgevoerd, uitgeschreven in issues en verwerkt.
+Voor de toegankelijkheid hebben we een WCAG Audit en Color Contrast Tests uitgevoerd, uitgeschreven in een [issue](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/issues/16) en verwerkt.
 
 - WCAG Audit is uitgevoerd door middel van de Lighthouse Accessibility test van Google Chrome en een handmatige test aan de hand van de checklist van de A11Y Project
 - Color Contrast Tests zijn gedaan op de teksten, icons en input-element borders met behulp van de app 'Colour Contrast Analyser' van TPGI
