@@ -128,7 +128,9 @@
             </fieldset>
         </form>
 
-        <h2>Voeg een bericht toe</h2>
+        <h2>Bericht plaatsen</h2>
+
+        <section class="formWarning">Let op: je dient beide velden in te vullen!</section>
         
         <form method="post" action="/student/{{ personDetail.id }}">
           <label>
@@ -142,12 +144,16 @@
           <button type="submit">Verstuur</button>
         </form>
 
-        <h2>Huidige berichten</h2>
+        <h2>Berichten</h2>
 
         {% for message in messages %}
-          <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+            <article class="message">
+                <section class="messageName">{{ message.from }}</section>
+                <section class="messageText">{{ message.text }}</section>
+                <section class="messageDates">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</section>
+            </article>
         {% else %}
-          <p>Er zijn nog geen berichten voor dit team.</p>
+          <section>Er zijn nog geen berichten. Wees de eerste!</section>
         {% endfor %}
     </section>
 

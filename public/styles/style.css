@@ -26,6 +26,7 @@ html {
     --second-light-color: rgb(241, 241, 241);
     --warm-light-color: rgb(251, 233, 216);
     --dark-border-color: rgb(0, 0, 0);
+    --warning-color: #ff0000;
     --max-width-notebook: 25em;
 
     --font-size-l: 1.6rem;
@@ -521,6 +522,13 @@ table {
     }
 }
 
+/* Styling voor het formulier */
+
+/* Waarschuwing formulier */
+.formWarning {
+    color: var(--warning-color);
+    display: none;
+}
 
 
 /* Styling voor footer */
