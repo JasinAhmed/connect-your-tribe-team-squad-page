@@ -640,3 +640,16 @@ table {
     padding-left: 2.8em;           /* ruimte voor het icoon */
     border-radius: 999px;          /* klikgebied ook rond */
 }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: white;
+  padding: 8px;
+  z-index: 1000;
+}
