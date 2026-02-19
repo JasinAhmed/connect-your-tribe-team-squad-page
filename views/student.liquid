@@ -148,12 +148,12 @@
 
         {% for message in messages %}
             <article class="message">
-                <section class="messageName">{{ message.from }}</section>
-                <section class="messageText">{{ message.text }}</section>
-                <section class="messageDates">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</section>
+                <p class="messageName">{{ message.from }}</p>
+                <p class="messageText">{{ message.text }}</p>
+                <p class="messageDates">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
             </article>
         {% else %}
-          <section>Er zijn nog geen berichten. Wees de eerste!</section>
+          <p>Er zijn nog geen berichten. Wees de eerste!</p>
         {% endfor %}
     </section>
 
