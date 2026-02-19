@@ -1,12 +1,12 @@
 # Squad Page 1J - Vriendenboekje - Team Sunny
-In sprint 7 hebben we de opdracht gekregen om met medestudenten, [Jasin Ahmed](https://github.com/JasinAhmed), [Luka Dujakovic](https://github.com/millie8969) en [Sieuwke Sheta](https://github.com/SieuwkeSheta), een 'Squad Page' te ontwerpen en bouwen met data uit de [FDND Directus](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name) database. Daarnaast hebben we gebruik gemaakt van NodeJS, Express, JSON en Liquid.
+In sprint 7 hebben we de opdracht gekregen om met medestudenten een 'Squad Page' te ontwerpen en bouwen met data uit de [FDND Directus](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name) database. Daarnaast hebben we gebruik gemaakt van NodeJS, Express, JSON en Liquid.
 
 De interacties die zijn ontworpen in deze Squad Page zijn een zoekbalk, een sorteer op alfabetische volgorde, een filter op favoriere seizoen en een comment sectie onder elke student als 'User Generated Content'.
 
 Er is rekening gehouden met responsiveness en toegankelijkheid van de website voor eindgebruikers. Door middel een WCAG audit en Color Contrast tests.
 
 #### Wie zijn wij?
-Wij zijn drie 1e jaars Frontend Design & Development studenten.
+Wij zijn drie 1e jaars Frontend Design & Development studenten, Team Sunny. [Jasin Ahmed](https://github.com/JasinAhmed), [Luka Dujakovic](https://github.com/millie8969) en [Sieuwke Sheta](https://github.com/SieuwkeSheta). 
 
 ## Inhoudsopgave
 
