@@ -14,10 +14,14 @@ Wij zijn drie 1e jaars Frontend Design & Development studenten.
   * [Filter op favoriete seizoen](#filter-op-favoriete-seizoen)
   * [Zoekbalk](#zoekbalk)
   * [Comments sectie](#comments-sectie)
+    
 * [Kenmerken](#kenmerken)
-  * [Code conventies](#code-conventies) 
+  * [Code conventies](#code-conventies)
+
 * [Installatie](#installatie)
+ 
 * [Bronnen](#bronnen)
+  
 * [Licentie](#licentie)
 
 ## Beschrijving
