@@ -47,6 +47,8 @@
   </search>
 
   <ul>
+    <li id="geenResultaat" hidden>Geen persoon gevonden.</li>
+
     {% for person in persons %}
       <li>
         <a href="/student/{{ person.id }}">
