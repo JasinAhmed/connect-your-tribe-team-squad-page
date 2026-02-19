@@ -127,34 +127,35 @@
                 </label>
             </fieldset>
         </form>
+        <div class="message-wrapper">
+            <h2>Bericht plaatsen</h2>
 
-        <h2>Bericht plaatsen</h2>
-
-        <p class="formWarning">Let op: je dient beide velden in te vullen!</p>
+            <p class="form-warning">Let op: je dient beide velden in te vullen!</p>
         
-        <form method="post" action="/student/{{ personDetail.id }}">
-          <label>
-            Naam:
-            <input type="text" name="from" required>
-          </label>
-          <label>
-            Bericht:
-            <textarea name="text" required></textarea>
-          </label>
-          <button type="submit">Verstuur</button>
-        </form>
+            <form method="post" action="/student/{{ personDetail.id }}" class="message-form">
+            <label class="field">
+                Naam:
+                <input type="text" name="from" required>
+            </label>
+            <label class="field">
+                Bericht (max. 200 karakters):
+                <textarea name="text" required class="field"></textarea>
+            </label>
+            <button type="submit" class="submit-message">Verstuur</button>
+            </form><hr>
 
-        <h2>Berichten</h2>
+            <h2>Berichten</h2>
 
-        {% for message in messages %}
-            <div class="message">
-                <p class="messageName">{{ message.from }}</p>
-                <p class="messageText">{{ message.text }}</p>
-                <p class="messageDate">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-            </div>
-        {% else %}
-          <p>Er zijn nog geen berichten. Wees de eerste!</p>
-        {% endfor %}
+            {% for message in messages %}
+                <div class="message">
+                    <p class="message-name">{{ message.from }}:</p>
+                    <p class="message-text">"{{ message.text }}"</p>
+                    <p class="message-date">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+                </div>
+            {% else %}
+            <p>Er zijn nog geen berichten. Wees de eerste!</p>
+            {% endfor %}
+        </div>
     </section>
 
 </main>
