@@ -65,21 +65,13 @@ Ademruimte en inspringen zorgen voor overzicht en het makkelijker kunnen aanpass
 Zie [voorbeeld](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/views/student.liquid#L6-L11).
 
 #### Volgorde en nesten van CSS selectors
-De volgorde van de HTML-structuur wordt aangehouden in de CSS en het nesten van de selectors. Wij hebben gebruik gemaakt van custom-properties in de :root om het DRY principe aan te houden
-
-Zie [voorbeeld van custom-properties](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L21-L25).
-
-Zie [voorbeeld van het nesten van CSS selectors](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L45-L83).
+De volgorde van de HTML-structuur wordt aangehouden in de CSS en het [nesten van de selectors](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L45-L83). Wij hebben gebruik gemaakt van [custom-properties](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L21-L25) in de :root om het *DRY* principe aan te houden.
 
 #### Nesten van media queries
-De website is mobile first gemaakt. De media queries zijn genest in de elementen, waardoor de code overzichtelijker is en de responsiviteit per element makkelijk aan te passen is.
-
-Zie [voorbeeld](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L383-L417).
+De website is mobile first gemaakt. De [media queries](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/public/styles/style.css#L383-L417) zijn genest in de elementen, waardoor de code overzichtelijker is en de responsiviteit per element makkelijk aan te passen is.
 
 #### Naamgeving
-De classes zijn in het engels geschreven en er is gebruik gemaakt van kebab-casing zodat de naam beter leesbaar is. Voor de custom-content zijn algemene namen gebruikt zoals `--dark-text-color:` zodat de kleur kaangepast kan worden zonder dat de naam aangepast hoeft te worden.
-
-Zie [voorbeeld](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/views/student.liquid#L6).
+De [classes](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/419cbed23620e9face46a27f148c4041d06112ce/views/student.liquid#L6) zijn in het engels geschreven en er is gebruik gemaakt van kebab-casing zodat de naam beter leesbaar is. Voor de custom-content zijn algemene namen gebruikt zoals `--dark-text-color:` zodat de kleur kaangepast kan worden zonder dat de naam aangepast hoeft te worden.
 
 ## Installatie
 Volg deze stappen om de development omgeving in te richten om aan deze repository te kunnen werken:
