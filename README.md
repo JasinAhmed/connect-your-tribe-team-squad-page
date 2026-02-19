@@ -49,6 +49,8 @@ Voor de toegankelijkheid hebben we een WCAG Audit en Color Contrast Tests uitgev
 ### Filter op favoriete seizoen
 De bedoeling van de interactie is dat als je op de 'Fav. seizoen' filter knop klikt, er een menu uit klapt met verschillende seizoenen. Als je op een seizoen klikt, veranderd de lijst met namen naar studenten wiens favoriete seizoen het is. 
 
+Het filter is gemaakt met meerdere [*route's*](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/63bf5e459933d1cd8617845c3046f08f40060ae8/server.js#L121-L261) in NodeJS, daarbij worden [objecten](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/63bf5e459933d1cd8617845c3046f08f40060ae8/server.js#L152) meegegeven aan het `seasons.liquid` *view* bestand en met [Liquid](https://github.com/JasinAhmed/connect-your-tribe-team-squad-page/blob/63bf5e459933d1cd8617845c3046f08f40060ae8/views/season.liquid#L30-L39) uitgelezen in de HTML.
+
 #### <ins>Feedforward & Feedback</ins>
 Feedforward filter naam:
 - Er staat een driehoek vóór de naam van het filter, wat betekend dat er meer items in het filter zitten
