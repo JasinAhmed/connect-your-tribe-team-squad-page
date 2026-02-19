@@ -556,6 +556,12 @@ table {
     margin: 1em 1.5em 0.8em 1.5em;  /* zelfde links/rechts als de ul */
     background: var(--light-color); /* zelfde wit als de lijst */
     border-radius: 999px;          /* afgeronde hoeken */
+    border: 2px solid transparent; /* zodat layout niet verspringt bij focus */
+}
+
+/* Focus state */
+.student-list .zoek-wrapper:focus-within {
+    border: 3.5px solid black;       /* simpele outline bij klikken */
 }
 
 /* Zoek icoon */
