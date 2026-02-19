@@ -147,11 +147,11 @@
         <h2>Berichten</h2>
 
         {% for message in messages %}
-            <article class="message">
+            <div class="message">
                 <p class="messageName">{{ message.from }}</p>
                 <p class="messageText">{{ message.text }}</p>
-                <p class="messageDates">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-            </article>
+                <p class="messageDate">Geplaatst op: {{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+            </div>
         {% else %}
           <p>Er zijn nog geen berichten. Wees de eerste!</p>
         {% endfor %}
