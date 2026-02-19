@@ -81,13 +81,21 @@ De filtering gebeurt volledig client-side, waardoor de interactie direct en zond
 #### Video demonstratie
 De werking van de zoekbalk wordt toegelicht in een korte video. In deze video is te zien hoe:
 
-- De lijst realtime filtert tijdens het typen  
-- De melding **"Geen persoon gevonden."** verschijnt wanneer er geen match is  
-- De focus-state zichtbaar wordt bij interactie  
+- De lijst filtert realtime tijdens het typen;
+- De melding **"Geen persoon gevonden."** verschijnt wanneer er geen match is;  
+- De focus-state zichtbaar wordt bij interactie.
 
 https://github.com/user-attachments/assets/b116acd3-fb50-4b07-a683-8cae79a37ea6
 
 ### Comments sectie
+
+Ik (Luka) heb voor onze squadpage een commentsectie ontworpen, waarbij bezoekers per profiel doormiddel van een `<form>` een bericht kunnen achterlaten die kan worden bekeken door de student wiens pagina bezocht wordt en door andere bezoekers. Het versturen van een geschreven comment wordt gedaan via een `POST` endpoint en onder het formulier worden de berichten aan de desbetreffende gebruiker getoond. Een geplaatste reactie ziet er als volgt uit:
+
+<img width="1918" height="942" alt="image" src="https://github.com/user-attachments/assets/4f7d53d1-cc90-4a05-aaea-e05078ca6ff5" />
+
+Als er geen reacties te vinden zijn, wordt de gebruiker op de volgende manier daarvan op de hoogte gebracht:
+
+<img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/e429f4ab-ed15-438f-a721-f432fed4d273" />
 
 ## Kenmerken
 We hebben gebruik gemaakt van HTML, CSS, JS, NodeJS, Express, JSON en Liquid. 
