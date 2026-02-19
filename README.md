@@ -46,6 +46,12 @@ Voor de toegankelijkheid hebben we een WCAG Audit en Color Contrast Tests uitgev
 - Color Contrast Tests zijn gedaan op de teksten, icons en input-element borders met behulp van de app 'Colour Contrast Analyser' van TPGI
 
 ### Filter op favoriete seizoen
+De bedoeling van de interactie is dat als je op de 'Fav. seizoen' filter knop klikt, er een menu uit klapt met verschillende seizoenen. Als je op een seizoen klikt, veranderd de lijst met namen naar studenten wiens favoriete seizoen het is. 
+  
+https://github.com/user-attachments/assets/fa1a5d5f-836f-4326-9ea3-7c09a684ce55
+
+
+
 
 ### Zoekbalk
 
