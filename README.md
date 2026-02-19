@@ -97,6 +97,10 @@ Stap 3) Open de Terminal in VSCodium, Voer in de terminal het commando `npm inst
 Stap 4 ) Na de installatie is de map `node_modules` aangemaakt, en gevuld met allerlei packages. Start de website door in de terminal het comando `npm start` uit te voeren. Als het goed is, komt hier een melding te staan over het opstarten van de server: Application started on http://localhost:8000 — Open deze URL in je browser
 
 ## Bronnen
+- [Lijst met 1e jaars studenten in de database - @FDND Directus API](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name)
+- [Quary Parameter - @Directus](https://directus.io/docs/guides/connect/query-parameters)
+- [Filter rules - @Directus](https://directus.io/docs/guides/connect/filter-rules)
+- [Liquid Markup - @Modyo Docs](https://docs.modyo.com/en/platform/channels/liquid-markup.html)
 
 
 ## Licentie
