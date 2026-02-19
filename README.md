@@ -48,11 +48,23 @@ Voor de toegankelijkheid hebben we een WCAG Audit en Color Contrast Tests uitgev
 
 ### Filter op favoriete seizoen
 De bedoeling van de interactie is dat als je op de 'Fav. seizoen' filter knop klikt, er een menu uit klapt met verschillende seizoenen. Als je op een seizoen klikt, veranderd de lijst met namen naar studenten wiens favoriete seizoen het is. 
+
+#### <ins>Feedforward & Feedback</ins>
+Feedforward filter naam:
+- Er staat een driehoek vóór de naam van het filter, wat betekend dat er meer items in het filter zitten
+- Met een hover over de filter naam krijgt de cursor een hand en wordt er een lijn laten zien onder de naam
+
+Feedback filter naam:
+- Na het klikken op de filter naam, klappen er meer filter items uit en blijft de lijn onder de naam staan
+
+Feedforward filter items:
+- Elk item heeft een lijn onder de naam
+- Met een hover over een filter item veranderd de kleur van de naam
+
+Feedback filter items:
+- Na het klikken op een filter item veranderd de lijst met namen
   
 https://github.com/user-attachments/assets/fa1a5d5f-836f-4326-9ea3-7c09a684ce55
-
-
-
 
 ### Zoekbalk
 
@@ -97,6 +109,10 @@ Stap 3) Open de Terminal in VSCodium, Voer in de terminal het commando `npm inst
 Stap 4 ) Na de installatie is de map `node_modules` aangemaakt, en gevuld met allerlei packages. Start de website door in de terminal het comando `npm start` uit te voeren. Als het goed is, komt hier een melding te staan over het opstarten van de server: Application started on http://localhost:8000 — Open deze URL in je browser
 
 ## Bronnen
+- [Lijst met 1e jaars studenten in de database - @FDND Directus API](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name)
+- [Quary Parameter - @Directus](https://directus.io/docs/guides/connect/query-parameters)
+- [Filter rules - @Directus](https://directus.io/docs/guides/connect/filter-rules)
+- [Liquid Markup - @Modyo Docs](https://docs.modyo.com/en/platform/channels/liquid-markup.html)
 
 
 ## Licentie
