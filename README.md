@@ -1,5 +1,5 @@
 # Squad Page 1J - Vriendenboekje - Team Sunny
-In sprint 7 hebben we de opdracht gekregen om met medestudenten, [Jasin Ahmed](https://github.com/JasinAhmed), [Luka Dujakovic](https://github.com/millie8969) en [Sieuwke Sheta](https://github.com/SieuwkeSheta), een Squad Page te ontwerpen en bouwen met data uit de [FDND Directus](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name) database. Daarnaast hebben we gebruik gemaakt van NodeJS, Express, JSON en Liquid.
+In sprint 7 hebben we de opdracht gekregen om met medestudenten, [Jasin Ahmed](https://github.com/JasinAhmed), [Luka Dujakovic](https://github.com/millie8969) en [Sieuwke Sheta](https://github.com/SieuwkeSheta), een 'Squad Page' te ontwerpen en bouwen met data uit de [FDND Directus](https://fdnd.directus.app/items/person/?fields=id,name,github_handle&filter=%7B%22_and%22:%5B%7B%22squads%22:%7B%22squad_id%22:%7B%22tribe%22:%7B%22name%22:%22FDND%20Jaar%201%22%7D%7D%7D%7D,%7B%22squads%22:%7B%22squad_id%22:%7B%22cohort%22:%222526%22%7D%7D%7D%5D%7D&sort=name) database. Daarnaast hebben we gebruik gemaakt van NodeJS, Express, JSON en Liquid.
 
 De interacties die zijn ontworpen in deze Squad Page zijn een zoekbalk, een sorteer op alfabetische volgorde, een filter op favoriere seizoen en een comment sectie onder elke student als 'User Generated Content'.
 
@@ -25,6 +25,7 @@ Wij zijn drie 1e jaars Frontend Design & Development studenten.
 * [Licentie](#licentie)
 
 ## Beschrijving
+Wij hebben een 'Squad Page' ontworpen en gebouwd met meerdere interacties, waaronder een comments sectie als 'User Generated Content', een index pagina met een lijst van alle studenten en een detailpagina van elke student. 
 
 <img width="800" alt="all-devices-black" src="https://github.com/user-attachments/assets/7d4277a6-fd8a-4dc9-94c1-987947872a75" />
 
