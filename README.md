@@ -64,6 +64,9 @@ Feedforward filter items:
 Feedback filter items:
 - Na het klikken op een filter item veranderd de lijst met namen
 
+
+https://github.com/user-attachments/assets/23065ea7-0cb4-49be-b262-e257990113b6
+
 ### Zoekbalk
 De zoekbalk is door mij ontwikkeld met JavaScript in een apart `script.js` bestand.
 
@@ -80,16 +83,7 @@ De werking van de zoekbalk wordt toegelicht in een korte video. In deze video is
 - De melding **"Geen persoon gevonden."** verschijnt wanneer er geen match is  
 - De focus-state zichtbaar wordt bij interactie  
 
-🔗 Link naar video: 
-
 https://github.com/user-attachments/assets/b116acd3-fb50-4b07-a683-8cae79a37ea6
-
-
-
-
-
-
-
 
 ### Comments sectie
 
