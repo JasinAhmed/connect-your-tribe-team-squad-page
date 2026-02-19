@@ -302,7 +302,7 @@ app.get('/student/:id', async function (request, response) {
   const paramsStudentForm = {
     // (Let op: gebruik 'template literals' voor het gebruik van variabelen)
     // Zie de documentatie voor meer info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-    'filter[for]': `sieuwke-id-${request.params.id}`,
+    'filter[for]': `${teamName}-id-${request.params.id}`,
     'sort': '-id'
   }
 
@@ -346,7 +346,7 @@ app.post('/student/:id', async function (request, response) {
     // Geef de body mee als JSON string
     body: JSON.stringify({
       // Dit is zodat we ons bericht straks weer terug kunnen vinden met ons filter
-      for: `sieuwke-id-${request.params.id}`,
+      for: `${teamName}-id-${request.params.id}`,
       // En dit zijn onze formuliervelden
       from: request.body.from,
       text: request.body.text
