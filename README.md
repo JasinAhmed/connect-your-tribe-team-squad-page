@@ -48,11 +48,23 @@ Voor de toegankelijkheid hebben we een WCAG Audit en Color Contrast Tests uitgev
 
 ### Filter op favoriete seizoen
 De bedoeling van de interactie is dat als je op de 'Fav. seizoen' filter knop klikt, er een menu uit klapt met verschillende seizoenen. Als je op een seizoen klikt, veranderd de lijst met namen naar studenten wiens favoriete seizoen het is. 
+
+#### <ins>Feedforward & Feedback</ins>
+Feedforward filter naam:
+- Er staat een driehoek vóór de naam van het filter, wat betekend dat er meer items in het filter zitten
+- Met een hover over de filter naam krijgt de cursor een hand en wordt er een lijn laten zien onder de naam
+
+Feedback filter naam:
+- Na het klikken op de filter naam, klappen er meer filter items uit en blijft de lijn onder de naam staan
+
+Feedforward filter items:
+- Elk item heeft een lijn onder de naam
+- Met een hover over een filter item veranderd de kleur van de naam
+
+Feedback filter items:
+- Na het klikken op een filter item veranderd de lijst met namen
   
 https://github.com/user-attachments/assets/fa1a5d5f-836f-4326-9ea3-7c09a684ce55
-
-
-
 
 ### Zoekbalk
 
