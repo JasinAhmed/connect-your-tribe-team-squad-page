@@ -70,7 +70,7 @@ Feedback filter items:
 https://github.com/user-attachments/assets/23065ea7-0cb4-49be-b262-e257990113b6
 
 ### Zoekbalk
-De zoekbalk is door mij ontwikkeld met JavaScript in een apart `script.js` bestand.
+De zoekbalk is door mij (Jasin) ontwikkeld met JavaScript in een apart `script.js` bestand.
 
 Met behulp van een `input` event listener wordt de ingevoerde waarde realtime vergeleken met de namen van de studenten in de lijst. De vergelijking is case-insensitive door zowel de zoekterm als de studentnaam om te zetten naar lowercase.
 
