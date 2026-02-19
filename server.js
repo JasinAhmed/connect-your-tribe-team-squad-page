@@ -303,6 +303,7 @@ app.get('/student/:id', async function (request, response) {
     // (Let op: gebruik 'template literals' voor het gebruik van variabelen)
     // Zie de documentatie voor meer info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
     'filter[for]': `sieuwke-id-${request.params.id}`,
+    'sort': '-id'
   }
 
   // Maak hiermee de URL aan, zoals we dat ook in de browser deden
