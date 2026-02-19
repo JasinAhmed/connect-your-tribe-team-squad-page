@@ -80,7 +80,15 @@ De werking van de zoekbalk wordt toegelicht in een korte video. In deze video is
 - De melding **"Geen persoon gevonden."** verschijnt wanneer er geen match is  
 - De focus-state zichtbaar wordt bij interactie  
 
-🔗 Link naar video: https://github.com/user-attachments/assets/9e5db281-b1e8-45f6-b332-0fb662cbe93d
+🔗 Link naar video: 
+
+https://github.com/user-attachments/assets/b116acd3-fb50-4b07-a683-8cae79a37ea6
+
+
+
+
+
+
 
 
 ### Comments sectie
