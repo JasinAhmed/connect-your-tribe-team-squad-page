@@ -31,6 +31,7 @@ Wij hebben een 'Squad Page' ontworpen en gebouwd met meerdere interacties, waaro
 
 >*Mockup van gemaakte Squad Page - Index*
 
+<img width="800" alt="all-devices-black(4)" src="https://github.com/user-attachments/assets/8dd18715-d7f6-4004-97d1-4d72b84f6188" />
 
 >*Mockup van gemaakte Squad Page - Studenten pagina*
 
